@@ -52,6 +52,10 @@ form input.but:hover {
     background-color: darkorange;
 }
 
+form input.but:hover, :focus, :active {
+    outline: 0;
+}
+
 form button {
     width: 100%;
     margin-bottom: 5px;
