@@ -1,19 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <usreinfo>
 
-    <user id="1">
-        <login>Admin</login>
-        <password>123321</password>
-        <email>Admin@mail.ru</email>
-        <name>Admin</name>
-        <sault>ghiytr12</sault>
-    </user>
-    <user id="2">
-        <login>User</login>
-        <password>123321</password>
-        <email>User@mail.ru</email>
-        <name>User</name>
-        <sault>ghi34ryh</sault>
-    </user>
-
-<user id="3"><login>Vlad</login><password>ae8493fc03c8a70d74912253aba590a7</password><email>Vlad@mail.ru</email><name>Vlad</name><sault>XQmX6k4o</sault></user><user id="4"><login>Petya</login><password>2c870f8e20512eb98d53894900dfdd9a</password><email>Pet@mail.ru</email><name>Pet</name><sault>hvGMzAKR</sault></user><user id="5"><login>Kat</login><password>a24cf4e43989ca9540a56ab72614289b</password><email>Kat@mail.ru</email><name>Kat</name><sault>kDUSe1Wd</sault></user><user id="6"><login>Stas</login><password>cb616bdc41237aec8ca0fc10f07d291b</password><email>Stas@mail.ru</email><name>Stas</name><sault>PiBhGh6h</sault></user><user id="7"><login>Gleb</login><password>53fcf1a9e8b7adc6a953d528eec6e646</password><email>Gleb@mail.ru</email><name>Gleb</name><sault>41A3YXlq</sault></user><user id="8"><login>Kolya</login><password>6214504a7395caed921cbb44115ca3bb</password><email>Kol@mail.ru</email><name>Kolya</name><sault>vMYbsO4H</sault></user><user id="9"><login>Lesha</login><password>74b6aea3c94c456579dc3fb14cae1edb</password><email>Lesha@mail.ru</email><name>Lesha</name><sault>SpeVht0N</sault></user><user id="10"><login>Lusi</login><password>32c4c6890d2c07d643294ce59797a9c3</password><email>Lusi@mail.ru</email><name>Lusi</name><sault>aDfe9HIU</sault></user></usreinfo>
+    
+<user id="1"><login>Admin</login><password>1c309857c6bb489fe9f4d1b0ef947eca</password><email>Admin@mail.ru</email><name>Admin</name><sault>OCbeU68j</sault></user></usreinfo>
