@@ -19,36 +19,30 @@ $xml = simplexml_load_file('db.xml');
     $errors = [];
 
     //валидация полей
-    if (!empty($login)){
+
+
+if (!empty($login)){
+    foreach($xml->user as $value){
+        if ($login == $value->login){
+            $errors[] = 'Пользователь с таким login уже существует';
+        }
+    }
+    if (!empty($mail) && (preg_match('/^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$/', $mail))){
         foreach($xml->user as $value){
-            if ($login == $value->login){
-                $errors[] = 'Пользователь с таким login уже существует';
+            if ($mail == $value->email){
+                $errors[] = 'Пользователь с таким email уже существует';
             }
         }
-
-        if (!empty($mail) && (preg_match('/^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$/', $mail))){
-            foreach($xml->user as $value){
-                if ($mail == $value->email){
-                    $errors[] = 'Пользователь с таким email уже существует';
-                }
+        if (!empty($pass)){
+            if ($pass !== $pass2){
+                $errors[]='Пароли не совпадают';
             }
-
-            if (!empty($pass)){
-                if ($pass !== $pass2){
-                    $errors[]='Пароли не совпадают';
-                }
-
-                if (empty($name)){
-                    $errors[]='Введите имя';
-                }
-
-            } else $errors[]='Введите пароль';
-
-
-        } else $errors[] =  'Некорректно введен email';
-
-
-    } else $errors[] =  'Введите имя пользователя';
+            if (empty($name)){
+                $errors[]='Введите имя';
+            }
+        } else $errors[]='Введите пароль';
+    } else $errors[] =  'Некорректно введен email';
+} else $errors[] =  'Введите имя пользователя';
 
 
 
@@ -84,7 +78,7 @@ $xml = simplexml_load_file('db.xml');
 
 
 if(!empty($errors)){
-    $response = $errors;
+    $response = $errors[0];
 }
 else {
     $response = 'Вы зарегистрированы';
